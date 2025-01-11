@@ -28,13 +28,12 @@ const BlogList = () => {
       ? blogs
       : blogs.filter(
           (item) =>
-            item.category &&
-            item.category.toLowerCase() === menu.toLowerCase()
+            item.category && item.category.toLowerCase() === menu.toLowerCase()
         );
 
   return (
     <div>
-      <div className="flex justify-center gap-6 my-10">
+      <div className="flex justify-center gap-3 my-10 mx-3 p-3 ">
         <button
           onClick={() => setMenu("All")}
           className={
@@ -83,7 +82,7 @@ const BlogList = () => {
             title={item.title}
             description={item.description}
             category={item.category}
-            image={item.image} 
+            image={item.image}
             id={item._id}
           />
         ))}
